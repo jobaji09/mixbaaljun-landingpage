@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import logo from './logo.svg'
+import friends from '/assets/friends.jpg'
+import facultaCiencias from '/assets/Escudo-facultad-ciencias-unam-escalable.svg'
 import './App.css'
 
 function App() {
@@ -8,49 +9,63 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>MixbaalJun</h1>
+        <nav>
+          <h1>MixbaalJun</h1>
+        </nav>
       </header>
 
       <main>
 
         <section className='card'>
-          <h2 className='frase title'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, ducimus?
-          </h2>
-          <div>
-            <img src="https://picsum.photos/200/300" alt="" />
+          <div className='card-content'>
+            <h2 className='frase title'>
+              Hola, Somos MixbaalJun
+            </h2>
+            <span>
+              Somo un grupo de amigos que estudiaron en la Maxima casa de estudios que alguna vez hicimos equipo para desarrollar un sistema de software,
+              como fue tan espectacular el resultado del trabajo en equipo decidimos no dejarlo morir apesar de que cada uno tomo su propio camino
+            </span>
+
+          </div>
+          <div className='card-info'>
+            <img src={friends} alt="friends" className='card-image' />
           </div>
         </section>
 
 
         <section className='card'>
-          <div>
+
+          <div className='card-content'>
+            <h2 className='frase'>
+              Computologos de corazón
+            </h2>
             <span>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit sit cupiditate natus eius alias ea et minus quo consectetur fuga sed omnis, neque debitis autem magni? Quam a sunt consequatur.
+              Estudiamos Ciencias de la Computación en la Facultad de ciencias, esto nos da una gran oportudidad para
+              poder desarrollarnos en lo que queramos
             </span>
+
+          </div>
+          <div className='card-info'>
+            <img src={facultaCiencias} alt="Escudo facultad de ciencias" className='card-image' />
           </div>
         </section>
 
         <section className='card'>
-          <div>
+          <div className='card-content'>
+            <h2 className='frase'>
+              Conocenos a fondo
+            </h2>
             <span>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit sit cupiditate natus eius alias ea et minus quo consectetur fuga sed omnis, neque debitis autem magni? Quam a sunt consequatur.
+              Si te interesa saber mas de cada uno te invito a checar el portafolio de cada uno.
             </span>
           </div>
         </section>
 
-        <section className='card'>
-          <div>
-            <span>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit sit cupiditate natus eius alias ea et minus quo consectetur fuga sed omnis, neque debitis autem magni? Quam a sunt consequatur.
-            </span>
-          </div>
-        </section>
 
       </main>
 
       <footer>
-        <span>Hola</span>
+        <span>No hay derechos que reservar gracias</span>
       </footer>
     </div>
   )

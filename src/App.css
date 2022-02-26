@@ -2,21 +2,37 @@
   background-color: black;
   height: 100vh;
   display: grid;
-  grid-template-rows: 3rem auto 1.5rem;
+  grid-template-rows: 3rem 1fr 1.5rem;
   grid-template-areas:
-    "header" 
-    "content" 
-    "footer"; 
+    "header"
+    "content"
+    "footer";
   overflow-x: hidden;
-  
+  --white-mixbaaljun: rgb(216, 224, 226);
+  --apple-colors: linear-gradient(
+    271deg,
+    #a0e9ff 30%,
+    #a162e8 50%,
+    #f093b0 70%,
+    #edca85 94%
+  );
+  --blackish : #1d1c1c;
 }
+
 header {
   grid-area: header;
   position: sticky;
   top: 0;
-  background-color: rgb(216, 224, 226);
+  background-color: var(--white-mixbaaljun);
   padding-left: 1rem;
   padding-right: 1rem;
+  color : var(--blackish);
+}
+
+nav {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main {
@@ -29,27 +45,91 @@ main {
   flex-direction: column;
   gap: 1rem;
   font-size: 20px;
-
+  max-width: 1600px;
 }
 
 footer {
   grid-area: footer;
-  background-color: rgb(216, 224, 226);
+  background-color: var(--white-mixbaaljun);
 }
 
 .card {
   display: flex;
   align-items: center;
+  gap: 0.7rem;
   flex-direction: column;
-  background-color: #1d1c1c;
   border-radius: 15px;
   padding: 1rem;
-  color: rgb(216, 224, 226);
+  color: var(--white-mixbaaljun);
+  border: 1px solid var(--blackish);
+  border-radius: 15px;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+  background-color: var(--blackish);
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+.card-image {
+  width: 20rem;
+  border-radius: 10px;
+  background-color: var(--white-mixbaaljun);
 }
 
 .title {
-  background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
-    background-clip: border-box;
+  background: var(--apple-colors) ;
+  background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+
+
+@media (min-width: 700px) {
+  .App {
+    grid-template-columns: 1fr auto 1fr;
+
+    grid-template-areas:
+      "header header  header"
+      ". content ."
+      "footer footer  footer";
+  }
+
+  .card {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center
+  }
+  /* .card-content {
+    flex-direction: row;
+  } */
+
+  .card-content > span {
+    min-width: 20rem;
+  }
+
+  .card-image {
+    width: 20rem;
+  }
+
+
+}
+
+@media (min-width: 1200px) {
+  
+  .card-content > h2 {
+    text-align: center;
+  }
+
+  .frase{
+    font-size: 6rem;
+  }
+  .card-image {
+    width: 30rem;
+  }
 }
