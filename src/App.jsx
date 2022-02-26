@@ -22,8 +22,9 @@ function App() {
               Hola, Somos MixbaalJun
             </h2>
             <span>
-              Somo un grupo de amigos que estudiaron en la Maxima casa de estudios que alguna vez hicimos equipo para desarrollar un sistema de software,
-              como fue tan espectacular el resultado del trabajo en equipo decidimos no dejarlo morir apesar de que cada uno tomo su propio camino
+              Este proyecto surgió mientras éramos estudiantes de Ciencias de la Computación en la máxima casa de estudios UNAM,
+              lo que empezó como un proyecto escolar se convirtió en una plataforma para proyectar nuestros trabajos personales y
+              los proyectos que seguimos realizando bajo el sello de MixbaalJun, acompáñanos a conocer más de cada uno de nosotros.
             </span>
 
           </div>
@@ -33,22 +34,20 @@ function App() {
         </section>
 
 
-        <section className='card'>
+        {/* <section className='card'>
 
           <div className='card-content'>
             <h2 className='frase'>
               Computologos de corazón
             </h2>
-            <span>
-              Estudiamos Ciencias de la Computación en la Facultad de ciencias, esto nos da una gran oportudidad para
-              poder desarrollarnos en lo que queramos
+            <span>o de nuestros integrantes
             </span>
 
           </div>
           <div className='card-info'>
             <img src={facultaCiencias} alt="Escudo facultad de ciencias" className='card-image' />
           </div>
-        </section>
+        </section> */}
 
         <section className='card'>
           <div className='card-content'>

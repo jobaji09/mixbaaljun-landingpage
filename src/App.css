@@ -16,7 +16,7 @@
     #f093b0 70%,
     #edca85 94%
   );
-  --blackish : #1d1c1c;
+  --blackish: #1d1c1c;
 }
 
 header {
@@ -26,7 +26,7 @@ header {
   background-color: var(--white-mixbaaljun);
   padding-left: 1rem;
   padding-right: 1rem;
-  color : var(--blackish);
+  color: var(--blackish);
 }
 
 nav {
@@ -59,9 +59,7 @@ footer {
   gap: 0.7rem;
   flex-direction: column;
   border-radius: 15px;
-  padding: 1rem;
   color: var(--white-mixbaaljun);
-  border: 1px solid var(--blackish);
   border-radius: 15px;
 }
 
@@ -82,13 +80,11 @@ footer {
 }
 
 .title {
-  background: var(--apple-colors) ;
+  background: var(--apple-colors);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-
 
 @media (min-width: 700px) {
   .App {
@@ -103,7 +99,10 @@ footer {
   .card {
     flex-direction: row;
     align-items: stretch;
-    justify-content: center
+    justify-content: center;
+    border: 1px solid var(--blackish);
+
+    padding: 1rem;
   }
   /* .card-content {
     flex-direction: row;
@@ -116,19 +115,13 @@ footer {
   .card-image {
     width: 20rem;
   }
-
-
 }
 
 @media (min-width: 1200px) {
-  
   .card-content > h2 {
     text-align: center;
   }
 
-  .frase{
-    font-size: 6rem;
-  }
   .card-image {
     width: 30rem;
   }
