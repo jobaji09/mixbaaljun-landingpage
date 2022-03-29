@@ -1,6 +1,6 @@
 .App {
   background-color: black;
-  height: 100vh;
+  /* height: 100vh; */
   display: grid;
   grid-template-rows: 3rem 1fr 1.5rem;
   grid-template-areas:
@@ -25,6 +25,7 @@ header {
   grid-area: header;
   /* position: sticky; */
   padding: 0px 1rem;
+  line-height: 3rem;
   top: 0;
 }
 

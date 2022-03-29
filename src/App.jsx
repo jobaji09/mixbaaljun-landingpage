@@ -16,12 +16,8 @@ function App() {
       </header>
 
       <main>
-
-
         <Welcome />
         <ContactUs />
-
-
       </main >
 
       <footer>

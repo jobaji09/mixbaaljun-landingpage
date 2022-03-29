@@ -24,7 +24,7 @@ const contacts = [
 
   },
   {
-    id: 1,
+    id: 2,
     name: "Jonathan Barragán Jiménez",
     img: jonathan,
     social: [
@@ -42,7 +42,7 @@ const contacts = [
 
   },
   {
-    id: 1,
+    id: 3,
     name: "Luis Soto Martínez",
     img: luis,
     social: [
