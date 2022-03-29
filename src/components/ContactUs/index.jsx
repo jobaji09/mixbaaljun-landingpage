@@ -82,7 +82,7 @@ function Contact({ name, social = [], img }) {
 
   return (
     <div className={styles.contact}>
-      <h3>{name} </h3>
+      <h4>{name} </h4>
       <img
         alt={name}
         className={styles.contactImage}
