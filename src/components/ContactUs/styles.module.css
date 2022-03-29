@@ -31,7 +31,6 @@
 
 .socialMediaList {
   list-style-type: none;
-  margin: 0;
   padding: 0;
   display: inline-block;
   margin: 2px;
@@ -40,6 +39,7 @@
 .socialMediaList li {
   display: inline-block;
   margin: 2px;
+  padding: 2px;
 }
 
 .socialMediaList li a {

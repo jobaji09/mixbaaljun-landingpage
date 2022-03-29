@@ -2,7 +2,8 @@ import styles from './styles.module.css'
 import daniela from '/assets/Daniela.jpeg'
 import luis from '/assets/Luis.jpeg'
 import jonathan from '/assets/Jonathan.jpeg'
-
+import { Github } from '../Icons/Github.jsx'
+import { Linkedin } from '../Icons/Linkedin.jsx'
 
 const contacts = [
   {
@@ -61,10 +62,22 @@ const contacts = [
   }
 ];
 
+const socialMedia = {
+  'linkedin': <Linkedin />,
+  'github': <Github />
+}
+
 function Contact({ name, social = [], img }) {
 
   const socialmedia = social.map(({ id, name, link }) => {
-    return <li key={id}><a href={link} target="_blank" rel="noopener noreferrer">{name} </a></li>
+    return <li key={id}>
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer">
+        {socialMedia[name]}
+      </a>
+    </li>
   });
 
   return (
