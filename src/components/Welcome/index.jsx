@@ -1,5 +1,6 @@
 import styles from './styles.module.css'
 import friends from '/assets/friends.jpg'
+import { FormattedMessage } from 'react-intl'
 
 
 export default function Welcome() {
@@ -9,12 +10,14 @@ export default function Welcome() {
     <div className={styles.welcome}>
       <div className={styles.welcomeTitle}>
         <span className={styles.title}>
-          Hola, Somos MixbáalJun
+          <FormattedMessage
+            id='welcome.title'
+          />
         </span>
         <span className={styles.welcomeDescription}>
-          Este proyecto surgió mientras éramos estudiantes de Ciencias de la Computación en la máxima casa de estudios UNAM,
-          lo que empezó como un proyecto escolar se convirtió en una plataforma para proyectar nuestros trabajos personales y
-          los proyectos que seguimos realizando bajo el sello de MixbáalJun, ¿Te animas a conocernos más?
+          <FormattedMessage
+            id='welcome.text'
+          />
         </span>
       </div>
 

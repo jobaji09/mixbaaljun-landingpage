@@ -18,20 +18,7 @@
   --blackish: #1d1c1c;
 }
 
-header {
-  background-color: var(--white-mixbaaljun);
-  color: var(--blackish);
-  grid-area: header;
-  /* position: sticky; */
-  padding: 0px 1rem;
-  line-height: 3rem;
-  top: 0;
-}
 
-nav {
-  margin-left: auto;
-  margin-right: auto;
-}
 
 main {
   grid-area: content;
@@ -45,14 +32,4 @@ footer {
   background-color: var(--white-mixbaaljun);
 }
 
-@media (min-width: 700px) {
-  header {
-    padding: 0px 4rem;
-  }
-}
 
-@media (min-width: 1200px) {
-  header {
-    padding: 0px 10rem;
-  }
-}

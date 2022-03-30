@@ -1,26 +1,22 @@
 import './App.css'
-import ContactUs from './components/ContactUs/index.jsx'
-import Welcome from './components/Welcome/index.jsx'
-
+import Header from './components/Header/index.jsx'
+import Footer from './components/Footer/index.jsx'
+import Home from './pages/Home/index.jsx'
+import { LangProvider } from './context/langContext.jsx'
 function App() {
 
+
   return (
-    <div className="App">
-      <header>
-        <nav>
-          <h1>MixbáalJun</h1>
-        </nav>
-      </header>
+    <LangProvider>
+      <div className="App">
+        <Header />
 
-      <main>
-        <Welcome />
-        <ContactUs />
-      </main >
-
-      <footer>
-        <span>No hay derechos que reservar gracias</span>
-      </footer>
-    </div >
+        <main>
+          <Home />
+        </main >
+        <Footer />
+      </div >
+    </LangProvider>
   )
 }
 
