@@ -1,47 +1,47 @@
 /* Welcome component */
+.welcomeContainer{
+  background-color: var(--light-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .welcome {
   align-items: center;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 0.5rem;
-  height: 100vh;
-
+  padding: 1rem 1rem;
 }
 
 .welcomeImage img {
-  border-radius: 5px;
-  width: 22rem;
-  background-size: 100% 100%;
   background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 5px;
+  border: 1px solid var(--dark-blue);
+  width: 22rem;
 }
 
-.welcomeTitle {
-  padding: 1rem 0px;
-}
 
 .welcomeDescription{
-  color: var(--white-mixbaaljun);
+  color: var(--lighter-green);
   font-size: 20px;
   line-height: 1.4;
 }
 
 .title {
-  background: var(--apple-colors);
+
+  background: var(--dark-blue);
   background-clip: border-box;
   font-size: 2.0rem;
+  font-weight: 500;
   display: block;
+  padding: 0.5rem 0px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 @media (min-width: 700px) {
   
-  .welcome {
-    padding: 2rem 4rem;
-    height: 90vh;
-  }
-
   .welcomeImage img {
     width: 35rem;
   }
@@ -59,7 +59,6 @@
     align-items: flex-start;
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 2rem 10rem;
-    height: auto;
+    width: 1200px;
   }
 }

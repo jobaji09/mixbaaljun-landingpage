@@ -99,15 +99,18 @@ function Contact({ name, social = [], img }) {
 export default function ContactUs() {
 
   return (
-    <div className={styles.contactUs}>
-      {contacts.map(({ id, name, img, social }) => <Contact
-        key={id}
-        name={name}
-        img={img}
-        social={social}
-      />
-      )
-      }
+    <div className={styles.contactContainer}>
+      <section className={styles.contactUs}>
+        {contacts.map(({ id, name, img, social }) => <Contact
+          key={id}
+          name={name}
+          img={img}
+          social={social}
+        />
+        )
+        }
+
+      </section>
 
     </div>
   )

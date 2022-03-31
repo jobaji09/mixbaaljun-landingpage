@@ -1,5 +1,5 @@
 .App {
-  background-color: black;
+  background-color: #072227;
   display: grid;
   grid-template-rows: 3rem 1fr 1.5rem;
   grid-template-areas:
@@ -16,6 +16,10 @@
     #edca85 94%
   );
   --blackish: #1d1c1c;
+  --dark-blue: #072227;
+  --light-blue: #35858B;
+  --light-green: #4FBDBA;
+  --lighter-green: #AEFEFF;
 }
 
 
@@ -27,9 +31,6 @@ main {
   font-size: 20px;
 }
 
-footer {
-  grid-area: footer;
-  background-color: var(--white-mixbaaljun);
-}
+
 
 

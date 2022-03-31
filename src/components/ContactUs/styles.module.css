@@ -1,15 +1,22 @@
 /* contact */
 
+.contactContainer{
+  background-color: var(--dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .contactUs {
   align-content: center;
-  background-color: var(--blackish);
   display: grid;
-  /* gap: 1rem; */
   grid-auto-rows: 25rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(25rem,100%),1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(18rem,100%),1fr));
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
+  /* outline: 1px solid tomato; */
+  width: 100%;
 }
 
 .contactImage {
@@ -17,7 +24,7 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border-radius: 50%;
-  border: 2px solid var(--white-mixbaaljun);
+  border: 2px solid var(--lighter-green);
 }
 
 .contact {
@@ -25,9 +32,10 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  color: var(--white-mixbaaljun);
+  color: var(--lighter-green);
   padding: 1rem;
   width: 100%;
+  /* outline: 1px solid tomato; */
 
 }
 
@@ -46,20 +54,17 @@
 }
 
 .socialMediaList li a {
-  color: var(--white-mixbaaljun);
+  color: var(--lighter-green);
 }
 
 
 @media (min-width: 700px) {
 
-  .contactUs{
-    padding: 2rem 2rem;
-  }
 
 }
 
 @media (min-width: 1200px) {
   .contactUs{
-    padding: 2rem 5rem;
+    width: 1200px;
   }
 }
