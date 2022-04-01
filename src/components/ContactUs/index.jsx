@@ -4,6 +4,7 @@ import luis from '/assets/Luis.jpeg'
 import jonathan from '/assets/Jonathan.jpeg'
 import { Github } from '../Icons/Github.jsx'
 import { Linkedin } from '../Icons/Linkedin.jsx'
+import { Link } from "wouter";
 
 const contacts = [
   {
@@ -21,7 +22,8 @@ const contacts = [
         name: "github",
         link: "https://github.com/DanielaCP19"
       }
-    ]
+    ],
+    page: '/daniela'
 
   },
   {
@@ -39,7 +41,8 @@ const contacts = [
         name: "github",
         link: "https://github.com/jobaji09"
       }
-    ]
+    ],
+    page: '/jonathan'
 
   },
   {
@@ -57,7 +60,8 @@ const contacts = [
         name: "github",
         link: "https://github.com/luisoto076"
       }
-    ]
+    ],
+    page: '/luis'
 
   }
 ];
@@ -67,7 +71,7 @@ const socialMedia = {
   'github': <Github />
 }
 
-function Contact({ name, social = [], img }) {
+function Contact({ name, social = [], img,page }) {
 
   const socialmedia = social.map(({ id, name, link }) => {
     return <li key={id}>
@@ -83,11 +87,13 @@ function Contact({ name, social = [], img }) {
   return (
     <div className={styles.contact}>
       <h4>{name} </h4>
-      <img
-        alt={name}
-        className={styles.contactImage}
-        src={img}
-      />
+      <Link href={page}>
+        <img
+          alt={name}
+          className={styles.contactImage}
+          src={img}
+        />
+      </Link>
       <ul className={styles.socialMediaList}>
         {socialmedia}
       </ul>
@@ -101,11 +107,12 @@ export default function ContactUs() {
   return (
     <div className={styles.contactContainer}>
       <section className={styles.contactUs}>
-        {contacts.map(({ id, name, img, social }) => <Contact
+        {contacts.map(({ id, name, img, social,page }) => <Contact
           key={id}
           name={name}
           img={img}
           social={social}
+          page={page}
         />
         )
         }

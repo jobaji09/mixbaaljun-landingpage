@@ -12,6 +12,7 @@
   justify-content: center;
   align-items: center;
   gap: 2px;
+  cursor: pointer;
 }
 .header {
   color: var(--lighter-green);

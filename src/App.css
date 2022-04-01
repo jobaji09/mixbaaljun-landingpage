@@ -32,5 +32,22 @@ main {
 }
 
 
+#container {
 
+    min-height: 95vh;
+    background: linear-gradient(-2deg, var(--lighter-green) 30%, var(--dark-blue) 90%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 1rem;
 
+}
+
+#message {
+  color: var(--lighter-green);
+  text-align: center;
+  padding: 3rem 0.5rem;
+  min-height: 70vh;
+  max-width: 27rem;
+}

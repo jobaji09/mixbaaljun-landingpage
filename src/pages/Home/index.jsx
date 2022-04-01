@@ -6,6 +6,14 @@ export default function Home() {
     <>
       <Welcome />
       <ContactUs />
+      <div className='historyContainer'>
+        <section className='history'>
+
+        </section>
+        <div>
+          
+        </div>
+      </div>
     </>
   )
 }

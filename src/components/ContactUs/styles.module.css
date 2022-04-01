@@ -25,7 +25,15 @@
   background-repeat: no-repeat;
   border-radius: 50%;
   border: 2px solid var(--lighter-green);
+  cursor: pointer;
+  transition: .5s;
 }
+
+.contactImage:hover{
+  opacity: 0.7;
+}
+
+
 
 .contact {
   display: flex;
@@ -51,6 +59,10 @@
   display: inline-block;
   margin: 2px;
   padding: 2px;
+  transition: .5s;
+}
+.socialMediaList li :hover{
+  opacity: 0.8;
 }
 
 .socialMediaList li a {
