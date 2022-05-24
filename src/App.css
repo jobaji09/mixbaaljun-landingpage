@@ -35,7 +35,8 @@ main {
 #container {
 
     min-height: 95vh;
-    background: linear-gradient(-2deg, var(--lighter-green) 30%, var(--dark-blue) 90%);
+    /* background: linear-gradient(-2deg, var(--lighter-green) 30%, var(--dark-blue) 90%); */
+    background-color: var(--light-blue);
     display: flex;
     justify-content: space-around;
     align-items: center;

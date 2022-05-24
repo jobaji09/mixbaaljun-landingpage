@@ -1,5 +1,9 @@
 {
   "welcome.title":"Hola, Somos MixbáalJun",
   "welcome.text": "Este proyecto surgió mientras éramos estudiantes de Ciencias de la Computación en la máxima casa de estudios UNAM, lo que empezó como un proyecto escolar se convirtió en una plataforma para proyectar nuestros trabajos personales y los proyectos que seguimos realizando bajo el sello de MixbáalJun, ¿Te animas a conocernos más?",
-  "footer" : "No hay derechos que reservar gracias" 
+  "footer" : "No hay derechos que reservar gracias",
+  "history.title": "¿Cómo surge el nombre de MixbáalJun?",
+  "history.text": "Pensando en cómo integrar las raíces prehispánicas con la ingeniería de software, se nos ocurrió utilizar la lengua maya para expresar el cero y el uno. Las palabras Mixba’al y Jun en maya yucateco, corresponden al número cero y uno respectivamente. En nuestra primera versión del logo intentamos integrar la M y la J junto con un círculo donde el círculo remarca lo que podría ser un uno.",
+  "notfound.title":"ESTE SITIO ESTÁ EN PROCESO",
+  "notfound.text":"Disculpa las molestias" 
 }

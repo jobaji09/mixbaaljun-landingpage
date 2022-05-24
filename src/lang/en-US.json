@@ -1,5 +1,9 @@
 {
   "welcome.title":"Hi, We are MixbáalJun",
   "welcome.text": "This project started while we were Computer Science students at UNAM, what started as a school project became a platform to show our personal projects and those we has made as the MixbáalJun team. Cheer up to meet us",
-  "footer" : "There are no rights to reserve, thank you" 
+  "footer" : "There are no rights to reserve, thank you",
+  "history.title": "How does the name MixbáalJun come about?",
+  "history.text": "Thinking about how to integrate pre-Hispanic roots with software engineering, we came up with the idea of using the Mayan language to express zero and one. The words Mixba'al and Jun in Yucatec Maya, correspond to the number zero and one respectively. In our first version of the logo we tried to integrate the M and J together with a circle where the circle highlights what could be a one.",
+  "notfound.title":"THIS SITE IS IN PROCESS",
+  "notfound.text":"Sorry for the inconvenience"
 }

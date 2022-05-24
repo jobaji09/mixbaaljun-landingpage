@@ -20,6 +20,7 @@
   position: sticky;
   line-height: 3rem;
   top: 0;
+  z-index:1;
 }
 
 .button{
