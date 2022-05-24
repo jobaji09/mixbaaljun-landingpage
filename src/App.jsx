@@ -19,9 +19,9 @@ function App() {
             <Route
               path='/'
               component={Home} />
-            <Route
+            {/* <Route
               path='/jonathan'
-              component={Jonathan} />
+              component={Jonathan} /> */}
             <Route component={NotFound}/>
           </Switch>
 
