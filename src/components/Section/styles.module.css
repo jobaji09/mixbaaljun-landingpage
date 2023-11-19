@@ -1,6 +1,5 @@
 /* Welcome component */
 .welcomeContainer{
-  background-color: var(--light-blue);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,17 +22,15 @@
 }
 
 .welcomeImage svg {
-  /* background-color: var(--white-mixbaaljun); */
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  /* border: 1px solid var(--dark-blue); */
   border-radius: 5px;
   width: 20rem;
   height: auto;
 }
 
 .welcomeDescription{
-  color: var(--lighter-green);
+  color: var(--dark-blue);
   font-size: 20px;
   line-height: 1.4;
 }

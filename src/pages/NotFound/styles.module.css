@@ -1,4 +1,12 @@
-.text{
-  height: 95vh;
-  background-color: var(--light-blue);
+.notFoundSection {
+  text-align: center;
+  min-height: 70vh;
+  max-width: 27rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  gap: 3rem;
+  color: var(--dark-blue);
 }

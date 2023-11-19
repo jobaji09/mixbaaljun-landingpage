@@ -1,7 +1,6 @@
 /* contact */
 
 .contactContainer{
-  background-color: var(--dark-blue);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +14,6 @@
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
-  /* outline: 1px solid tomato; */
   width: 100%;
 }
 
@@ -24,7 +22,7 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border-radius: 50%;
-  border: 2px solid var(--lighter-green);
+  border: 2px solid var(--dark-blue);
   cursor: pointer;
   transition: .5s;
 }
@@ -40,11 +38,9 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  color: var(--lighter-green);
+  color: var(--dark-blue);
   padding: 1rem;
   width: 100%;
-  /* outline: 1px solid tomato; */
-
 }
 
 
@@ -66,7 +62,7 @@
 }
 
 .socialMediaList li a {
-  color: var(--lighter-green);
+  color: var(--dark-blue);
 }
 
 

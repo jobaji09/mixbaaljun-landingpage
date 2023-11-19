@@ -13,8 +13,8 @@ function App() {
     <LangProvider>
       <div className="App">
         <Header />
-        <main>
-          <ScrollToTop/>
+        <main >
+          <ScrollToTop />
           <Switch>
             <Route
               path='/'
@@ -22,7 +22,7 @@ function App() {
             {/* <Route
               path='/jonathan'
               component={Jonathan} /> */}
-            <Route component={NotFound}/>
+            <Route component={NotFound} />
           </Switch>
 
         </main >

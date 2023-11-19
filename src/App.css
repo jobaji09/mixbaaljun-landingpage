@@ -1,12 +1,12 @@
 .App {
-  background-color: #072227;
+  background-color: #b1c9ef;
   display: grid;
-  grid-template-rows: 3rem 1fr 1.5rem;
+  grid-template-rows: 3rem minmax(min(18rem, 100%), 1fr) 1.5rem;
   grid-template-areas:
     "header"
     "content"
     "footer";
-  /* overflow-x: hidden; */
+  justify-content: space-evenly;
   --white-mixbaaljun: rgb(216, 224, 226);
   --apple-colors: linear-gradient(
     271deg,
@@ -15,40 +15,20 @@
     #f093b0 70%,
     #edca85 94%
   );
-  --blackish: #1d1c1c;
-  --dark-blue: #072227;
-  --light-blue: #35858B;
-  --light-green: #4FBDBA;
-  --lighter-green: #AEFEFF;
+  --blackish: #032030;
+  --dark-blue: #022b42;
+  --light-blue: #004d74;
+  --light-green: #006da4;
+  --lighter-green: #006494;
+  --white: #f0f3fa;
+  --white-blue: #d5deef;
 }
-
-
 
 main {
   grid-area: content;
   display: flex;
   flex-direction: column;
   font-size: 20px;
-}
-
-
-#container {
-
-    min-height: 95vh;
-    /* background: linear-gradient(-2deg, var(--lighter-green) 30%, var(--dark-blue) 90%); */
-    background-color: var(--light-blue);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0 1rem;
-
-}
-
-#message {
-  color: var(--lighter-green);
-  text-align: center;
-  padding: 3rem 0.5rem;
-  min-height: 70vh;
-  max-width: 27rem;
+  gap: 4rem;
+  align-items: center;
 }

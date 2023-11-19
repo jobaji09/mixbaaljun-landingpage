@@ -7,7 +7,7 @@
   padding: 0px 1rem;
   border-radius: 5px;
 }
-.logo{
+.logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,16 +15,16 @@
   cursor: pointer;
 }
 .header {
-  color: var(--lighter-green);
+  color: var(--white-blue);
   grid-area: header;
   position: sticky;
   line-height: 3rem;
   top: 0;
-  z-index:1;
+  z-index: 1;
 }
 
-.button{
-  background-color: var(--light-green);
+.button {
+  background-color: var(--white-blue);
   width: 2.5rem;
   border-radius: 5px;
   text-decoration: none;
@@ -32,18 +32,18 @@
   outline: none;
   color: var(--dark-blue);
   cursor: pointer;
-  transition: 0.3s ;
-  border-color: var(--light-blue);
+  transition: 0.3s;
+  border-color: var(--dark-blue);
 }
-.button:hover{
-  background-color: var(--lighter-green);
+.button:hover {
+  background-color: var(--white);
 }
 
 @media (min-width: 700px) {
 }
 
 @media (min-width: 1200px) {
-  .navigation{
+  .navigation {
     width: 1200px;
   }
 }
