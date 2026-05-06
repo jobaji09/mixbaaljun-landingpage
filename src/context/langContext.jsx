@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IntlProvider} from 'react-intl'
+import { IntlProvider } from 'react-intl'
 import spanish from '@/lang/es-MX.json'
 import english from '@/lang/en-US.json'
 
@@ -11,16 +11,16 @@ const suportedLanguages = {
 }
 
 const showTheOtherLang = {
-  'es-MX':'en-US',
-  'en-US':'es-MX',
+  'es-MX': 'en-US',
+  'en-US': 'es-MX',
 }
 
 const LangProvider = ({ children }) => {
 
-  const currentLang = localStorage.getItem('lang') || 'es-MX' 
+  const currentLang = localStorage.getItem('lang') || navigator.language;
 
-  const [messages, setMessages] = useState(suportedLanguages[currentLang]||spanish)
-  const [locale, setLocale] = useState(currentLang in suportedLanguages? currentLang : 'es-MX')
+  const [messages, setMessages] = useState(suportedLanguages[currentLang] || spanish)
+  const [locale, setLocale] = useState(currentLang in suportedLanguages ? currentLang : 'es-MX')
 
   const changeLang = (lang) => {
     if (lang in suportedLanguages) {
@@ -30,9 +30,9 @@ const LangProvider = ({ children }) => {
     }
   }
   return (
-    <langContext.Provider value={{ changeLang,langtoChange : showTheOtherLang[currentLang] }}>
-      <IntlProvider 
-        locale={locale}  
+    <langContext.Provider value={{ changeLang, langtoChange: showTheOtherLang[currentLang] }}>
+      <IntlProvider
+        locale={locale}
         messages={messages}>
         {children}
       </IntlProvider>
