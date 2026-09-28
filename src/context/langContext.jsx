@@ -33,7 +33,7 @@ const LangProvider = ({ children }) => {
   }
 
   return (
-    <langContext.Provider value={{ changeLang, langtoChange: showTheOtherLang[locale] }}>
+    <langContext.Provider value={{ changeLang, langtoChange: showTheOtherLang[currentLang] || 'en-US' }}>
       <IntlProvider
         locale={locale}
         messages={messages}>
