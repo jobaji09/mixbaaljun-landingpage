@@ -1,0 +1,28 @@
+name: Autoborrado Selectivo de Ramas
+
+on:
+  pull_request:
+    types: [ closed ]
+
+jobs:
+  delete-branch:
+    name: Eliminar Rama Remota
+    # Se ejecuta SOLO si el Pull Request fue efectivamente fusionado (merged)
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Borrar rama remota si cumple con el prefijo
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          echo "Analizando rama fusionada: $HEAD_REF"
+
+          if [[ "$HEAD_REF" =~ ^(feat|hotfix)[/-] ]]; then
+            echo "🗑️ Borrando la rama remota '$HEAD_REF'..."
+            gh api -X DELETE "repos/${{ github.repository }}/git/refs/heads/$HEAD_REF"
+            echo "✅ Rama '$HEAD_REF' eliminada correctamente."
+          else
+            echo "ℹ️ La rama '$HEAD_REF' no inicia con 'feat/' ni 'hotfix/'. Se conserva en el repositorio."
+          fi
