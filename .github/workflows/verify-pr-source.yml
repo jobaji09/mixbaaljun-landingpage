@@ -1,0 +1,22 @@
+name: Validar Origen de Pull Request
+
+on:
+  pull_request:
+    branches: [ "main" ] # Se activa al intentar hacer un PR hacia main
+
+jobs:
+  check-source-branch:
+    name: Verificar Rama de Origen
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validar que el PR venga de 'development'
+        run: |
+          echo "Rama origen detectada: ${{ github.head_ref }}"
+          
+          if [ "${{ github.head_ref }}" != "development" ]; then
+            echo "❌ ERROR: Los Pull Requests hacia 'main' solo se permiten si provienen de la rama 'development'."
+            exit 1
+          fi
+          
+          echo "✅ Validación correcta: El PR proviene de 'development'."
