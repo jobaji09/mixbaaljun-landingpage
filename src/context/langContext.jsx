@@ -31,8 +31,9 @@ const LangProvider = ({ children }) => {
       setLocale(lang)
     }
   }
+
   return (
-    <langContext.Provider value={{ changeLang, langtoChange: showTheOtherLang[currentLang] }}>
+    <langContext.Provider value={{ changeLang, langtoChange: showTheOtherLang[locale] }}>
       <IntlProvider
         locale={locale}
         messages={messages}>
