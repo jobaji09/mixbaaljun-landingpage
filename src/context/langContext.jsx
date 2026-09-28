@@ -18,11 +18,9 @@ const showTheOtherLang = {
 const LangProvider = ({ children }) => {
 
   const currentLang = localStorage.getItem('lang') || navigator?.language || 'es-MX';
-  console.log({ currentLang })
 
   const [messages, setMessages] = useState(suportedLanguages[currentLang] || spanish)
   const [locale, setLocale] = useState(currentLang in suportedLanguages ? currentLang : 'es-MX')
-  console.log({ messages, locale })
 
   const changeLang = (lang) => {
     if (lang in suportedLanguages) {
