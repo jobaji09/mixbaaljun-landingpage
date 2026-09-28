@@ -1,0 +1,25 @@
+name: Validar Origen PR hacia Development
+
+on:
+  pull_request:
+    branches: [ "development" ]
+
+jobs:
+  check-dev-source:
+    name: Verificar Prefijo de Rama
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validar que la rama inicie con feat/ o hotfix/
+        env:
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          echo "Rama de origen detectada: $HEAD_REF"
+
+          # Evalúa si la rama inicia con "feat" o "hotfix" seguido de "/" o "-"
+          if [[ "$HEAD_REF" =~ ^(feat|hotfix)[/-] ]]; then
+            echo "✅ Validación exitosa: La rama '$HEAD_REF' está permitida."
+          else
+            echo "❌ ERROR: Los Pull Requests hacia 'development' solo se permiten desde ramas que inicien con 'feat/' o 'hotfix/' (ej: feat/login, hotfix/bug-css)."
+            exit 1
+          fi
