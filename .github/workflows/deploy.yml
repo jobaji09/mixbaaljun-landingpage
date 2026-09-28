@@ -16,11 +16,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          # cache: 'npm'
 
       - name: Instalar dependencias y compilar
         run: |
-          npm ci
+          npm install
           npm run build
 
       - name: Instalar cliente Cloudflare
