@@ -22,6 +22,15 @@ jobs:
         run: |
           npm install
           npm run build
+
+      - name: Instalar cliente Cloudflare
+        run: |
+          curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+          sudo dpkg -i cloudflared.deb
+
+      # Obtener los primeros 7 caracteres del commit
+      - name: Obtener SHA corto del commit
+        run: echo "SHORT_SHA=${GITHUB_SHA:0:7}" >> $GITHUB_ENV
           
       - name: Configurar clave SSH
         uses: webfactory/ssh-agent@v0.9.0
@@ -33,10 +42,6 @@ jobs:
           scp -o StrictHostKeyChecking=no \
               -o ProxyCommand="cloudflared access ssh --hostname %h" \
               -r dist/* ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:${{ secrets.PROJECT_PATH }}/
-
-      # Obtener los primeros 7 caracteres del commit
-      - name: Obtener SHA corto del commit
-        run: echo "SHORT_SHA=${GITHUB_SHA:0:7}" >> $GITHUB_ENV
 
       # Ejecutar comandos remotos mediante SSH nativo
       - name: Desplegar en Mictlán vía SSH nativo
