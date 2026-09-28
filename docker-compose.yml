@@ -1,0 +1,14 @@
+services:
+  landing:
+    build: . # Opcional: solo si Dockerfile está en la misma carpeta
+    image: mixbaaljun_landing:${IMAGE_TAG:-latest}
+    ports:
+      - 8082:8080
+    container_name: mixbaaljun_landing
+    restart: unless-stopped
+    networks:
+      - proxy_network
+
+networks:
+  proxy_network:
+    external: true

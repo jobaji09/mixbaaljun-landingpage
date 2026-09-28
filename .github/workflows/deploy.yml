@@ -49,4 +49,14 @@ jobs:
           proxy_command: cloudflared access ssh --hostname %h
           script: |
             cd ${{ secrets.PROJECT_PATH }}
-            docker compose exec -T nginx nginx -s reload
+
+            # Extraer la rama actual y los primeros 7 caracteres del SHA del commit
+            BRANCH=${{ github.ref_name }}
+            COMMIT_SHA=${{ github.sha }}
+            SHORT_SHA=${COMMIT_SHA:0:7}
+
+            # Pasar el tag a Docker Compose al construir/levantar
+            IMAGE_TAG=$SHORT_SHA docker compose up -d --build
+
+            # Limpiar versiones e imágenes viejas sin usar para evitar llenar el disco
+            docker image prune -f
